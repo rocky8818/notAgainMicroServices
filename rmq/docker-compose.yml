@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.10-rc-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ./data-dev:/var/lib/rabbitmq
+
